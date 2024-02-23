@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANTOPS MUSIC</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #wrapper {
+            width: 100%;
+            height: 100vh;
+            background-color: #369;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #banner {
+            width: 100%;
+            height: 50px;
+            background-color: #003;
+            color: #fefefe;
+            display: flex;
+            align-items: center;
+        }
+
+        #logo {
+            width: 30%;
+            height: 100%;
+        }
+
+        #logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #banner_cnt {
+            width: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bolder;
+        }
+
+        #container {
+            width: 100%;
+            height: 50px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menus {
+            margin: 0 8px;
+            height: 50px;
+            line-height: 50px;
+            cursor: pointer;
+            border-radius: 20px 0 20px 0;
+            padding: 0 8px;
+            border-right: 1.5px solid #f36;
+        }
+
+        #current {
+            background-color: #369;
+        }
+
+        #first_info_with_back_img {
+            height: 600px;
+            width: 100%;
+            background-image: url(img/Orange.jpg);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #acc;
+        }
+
+        #first_info_write-up {
+            font-size: 48px;
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        #other_info {
+            width: 96%;
+            min-height: 330px;
+            background-color: #006;
+            border-radius: 20px 20px 0 0;
+            opacity: 0.6;
+            margin-top: 1%;
+            padding: 2%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #left-side,
+        #right-side {
+            width: 47%;
+            min-height: 200px;
+            border: 1px solid #888;
+            margin-right: 1%;
+            padding: 1%;
+        }
+
+        #right-side {
+            border-radius: 0 20px 0 0;
+        }
+
+        .left-fields-holder {
+            width: 100%;
+            float: left;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .left-field-label {
+            width: 20%;
+            float: left;
+            margin-right: 0.5%;
+            color: #fefefe;
+        }
+
+        .left-fields {
+            width: 75%;
+            float: left;
+            height: 35px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #261;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #audio-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #audio-player {
+            width: 50%;
+            margin-top: 10px;
+        }
+
+        #copyright {
+            text-align: center;
+            color: #f36;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="banner">
+            <div id="logo"><img src="img/Neon-light.jpg" alt="our logo image" width="150" height="50" /></div>
+            <div id="banner_cnt">SANTOPS MUSIC INDUSTRY LIMITED, ENUGU</div>
+        </div>
+
+        <div id="container">
+            <div id="current" class="menus">Home</div>
+            <div class="menus">About</div>
+            <div class="menus">Download</div>
+            <div class="menus">Contact us</div>
+            <div class="menus">Sign-in</div>
+            <div class="menus">Sign-up</div>
+            <div class="menus" id="faq">Faqs</div>
+        </div>
+
+        <div id="first_info_with_back_img">
+            <p id="first_info_write-up">SANTOPS MUSIC IS THE BEST SITE TO DOWNLOAD ALL YOUR FAVOURITE SONGS AND IF YOU ARE PLANNING TO BUILD UP YOUR MUSIC CAREER TO A GREATER HEIGHT JUST<br />
+                <span style="color:#fefefe; font-weight:bolder;">THINK OF SANTOPS MUSIC INDUSTRY,LTD</span>
+            </p>
+            <marquee><p style="text-align:center; color:#bcdbcd; font-weight:bolder; font-size:48px;"><i>"We turn your passion into your profession"</i></p></marquee>
+        </div>
+
+        <div id="other_info">
+            <div id="left-side">
+                <form method="post" action="" enctype="multipart/form-data" id="left-form">
+                    <div class="left-fields-holder">
+                        <label class="left-field-label">Username**:</label>
+                        <input class="left-fields" type="text" id="username" name="username" placeholder="Enter Your Username" title="Your Username Please..." required="required" />
+
+                        <label class="left-field-label">Password**:</label>
+                        <input class="left-fields" type="password" id="Password" name="Password" placeholder="Enter Your Password" title="Your Password Please..." required="required" />
+                    </div>
+                </form>
+            </div>
+
+            <div id="right-side">
+                <form>
+                    <h2 style="color:red;">SIGN-UP</h2>
+                    <p style="color:green">All fields marked<span style="color:red;">(*)</span> must be filled</p><br />
+                    <label style="color:#ccc">Firstname<span style="color:red;">*</span>:</label>
+                    <input type="text" placeholder="Type your Firstname here" style="width:250px; height:30px;" /><br /><br />
+                    <!-- Add similar input fields for other information -->
+                    <button>Register</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="audio-container">
+            <audio id="audio-player" controls autoplay loop>
+                <source src="audio/We Are One - Lion King 2 - With Lyrics ( 160kbps ).mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div id="copyright">&copy; Kis-Technologies LTD. All rights reserved.</div>
+    </div>
+</body>
+
+</html>
